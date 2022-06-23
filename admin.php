@@ -24,7 +24,7 @@
             <button type="submit" id="filter"><i class="fa-solid fa-filter"></i> Filtrar</button>
         </form>
 
-        <div class="max" id="second">
+        <div class="max oculto" id="second">
 
             <form action="filtrar.php" method="POST">
             
@@ -45,8 +45,8 @@
     <main id="products">
         <div class="max">
         
-        <form class="product" method="POST" action="agregar.php">
-            <label for="imagen" id="label-imagen">Add photo <i class="fa-solid fa-cloud-arrow-up"></i></label>
+        <form class="product" method="POST" action="agregar.php" enctype="multipart/form-data">
+            <label for="imagen" id="label-imagen"><span style="font-weight: 700; font-size: .9rem; color:red; text-decoration: underline">(Campo obligatorio)</span> Add photo <i class="fa-solid fa-cloud-arrow-up"></i></label>
             <input class="form-editable" type="file" name="imagen" id="imagen" hidden>
             <input class="form-editable" type="text" name="prenda" id="prenda" placeholder="Tipo de prenda" required>
             <input class="form-editable" type="text" name="marca" id="marca" placeholder="Marca" required>

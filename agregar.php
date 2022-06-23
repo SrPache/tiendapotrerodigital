@@ -13,7 +13,7 @@ $marca = strtolower($_POST['marca']);
 $talle = strtolower($_POST['talle']);
 $precio = strtolower($_POST['precio']);
 
-$imagen = $_POST['imagen'];
+// $imagen = $_POST['imagen'];
 
 $color = strtolower($_POST['color']);
 
@@ -26,8 +26,9 @@ if (isset($_POST['link'])){
 }
 
 
-$consulta = "INSERT INTO ropa (id, prenda, marca, talle, precio, color) VALUES (".$id.", '".$prenda."', '".$marca."', '".$talle."', '".$precio."', '".$color."')";
+$imagen = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
 
+$consulta = "INSERT INTO ropa (id, prenda, marca, talle, precio, imagen, color, link) VALUES ('','$prenda','$marca','$talle','$precio','$imagen', $color, $link)";
 mysqli_query($conexion, $consulta);
 header('location: admin.php');
 

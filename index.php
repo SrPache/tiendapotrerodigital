@@ -24,7 +24,7 @@
             <button type="submit" id="filter"><i class="fa-solid fa-filter"></i> Filtrar</button>
         </form>
 
-        <div class="max" id="second">
+        <div class="max oculto" id="second">
 
             <form action="filtrar.php" method="POST">
             
